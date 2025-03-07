@@ -8,7 +8,7 @@ class PowersController < ApplicationController
   def create
     @power = current_user.powers.build(power_params)
     if @power.save
-      redirect_to power_path, notice: "Poder criado com sucesso!"
+      redirect_to power_path(@power), notice: "Poder criado com sucesso!"
     else
       render :new, status: :unprocessable_entity
     end
