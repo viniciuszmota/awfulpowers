@@ -6,9 +6,9 @@ class PowersController < ApplicationController
   end
 
   def create
-    @power = Power.new(power_params)
+    @power = current_user.powers.build(power_params)
     if @power.save
-      redirect_to power_path(@power), notice: "Poder criado com sucesso!"
+      redirect_to power_path, notice: "Poder criado com sucesso!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,7 +23,7 @@ class PowersController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def update
@@ -46,6 +46,7 @@ class PowersController < ApplicationController
   def set_power
     @power = Power.find(params[:id])
   end
+
   def power_params
     params.require(:power).permit(:name, :description, :price, :category)
   end
