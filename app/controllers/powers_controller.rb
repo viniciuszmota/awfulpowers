@@ -47,6 +47,6 @@ class PowersController < ApplicationController
     @power = Power.find(params[:id])
   end
   def power_params
-    params.require(:power).permit(:name, :description, :category, :element, :power_type, :power_level, :power_cost, :power_range, :power_duration, :power_effect)
+    params.require(:power).permit(:name, :description, :price, :category)
   end
 end
