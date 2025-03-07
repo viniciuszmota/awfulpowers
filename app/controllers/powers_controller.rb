@@ -15,7 +15,6 @@ class PowersController < ApplicationController
   end
 
   def show
-    @power
   end
 
   def index
