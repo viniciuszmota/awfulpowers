@@ -1,3 +1,4 @@
 <h1><%= @power.name%></h1>
 <p><%= @power.description %></p>
 <p>$<%= @power.price %></p>
+<%= button_to "Comprar", orders_path(order: { power_id: @power.id }), data: { turbo_method: :post }, class: "btn btn-primary" %>
