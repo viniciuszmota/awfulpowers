@@ -1,21 +1,17 @@
-class OrderController < ApplicationController
-  before_action :set_power, only: [:show]
+class OrdersController < ApplicationController
   before_action :set_order, only: [:show]
 
   def show
-    if order.user == current_user
+    if @order.user == current_user
       render :show
     else
       redirect_to root_path, alert: "Nao autorizado"
     end
+  end
 
-    private
+  private
 
     def set_order
       @order = Order.find(params[:id])
-    end
-
-    def set_power
-      @power = Power.find(params[:id])
     end
 end
