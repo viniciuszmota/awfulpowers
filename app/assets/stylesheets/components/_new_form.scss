@@ -2,7 +2,7 @@
   max-width: 500px;
   margin: 50px auto; /* Centraliza na página */
   padding: 30px;
-  background: #f8f9fa; /* Fundo suave */
+  background: #ffffff; /* Fundo suave */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border: solid .5px;
@@ -30,11 +30,11 @@
   font-size: 16px;
 }
 
-.form-actions {
+.form-btn {
   text-align: center;
 }
 
-.form-actions button {
+.form-btn button {
   width: 100%;
   padding: 10px;
   background: #2CFFFF;
@@ -46,7 +46,7 @@
   transition: background 0.3s ease;
 }
 
-.form-actions button:hover {
+.form-btn button:hover {
   background: #22cccc;
 }
 
