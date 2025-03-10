@@ -1,6 +1,16 @@
-<h1>Lista das suas orders</h1>
-<ul>
-  <% @orders.each do |order|%>
-    <li><%= order.power.name %></li>  
-  <%end%>
-</ul>
+<h1 class="text-center mb-4">Lista das suas ordens</h1>
+
+<div class="d-flex justify-content-center align-items-center min-vh-100">
+  <div class="order-list">
+    <ul class="list-group">
+      <% @orders.each do |order| %>
+        <li class="list-group-item text-center"><%= order.power.name %></li>
+      <% end %>
+    </ul>
+
+    <!-- GIF ao final da lista -->
+    <div class="text-center mt-4">
+      <%= image_tag "uncleben.gif", alt: "Responsabilidade", class: "img-fluid" %>
+    </div>
+  </div>
+</div>
