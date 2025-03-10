@@ -6,16 +6,17 @@
 
     <% if user_signed_in? %>
       <div class="nav-list">
-        <%= link_to 'COMPRAR', '#', class: 'nav-link custom-nav-link' %>
-        <button class="btn custom-button"><%= button_to "Sair", destroy_user_session_path, method: :delete %></button>
+        <%= link_to 'Comprar', powers_path, class: 'nav-link custom-nav-link' %>
+        <%= link_to 'Vender', new_power_path, class: 'nav-link custom-nav-link' %>
+        <%= button_to "Sair", destroy_user_session_path, method: :delete, class: "btn custom-button" %>
       </div>
     <% else %>
       <div class="nav-list">
-        <%= link_to 'HOME', '#', class: 'nav-link custom-nav-link' %>
+        <%= link_to 'HOME', root_path, class: 'nav-link custom-nav-link' %>
         <%= link_to 'SOBRE', '#', class: 'nav-link custom-nav-link' %>
         <%= link_to 'CONTATO', '#', class: 'nav-link custom-nav-link' %>
-        <button class="btn custom-button"><%= link_to "Login", new_user_session_path %></button>
-        <button class="btn custom-button">Cadastrar</button>
+        <%= link_to "Login", new_user_session_path, class: "btn custom-button" %>
+        <%= link_to "Cadastrar", new_user_registration_path, class: "btn custom-button" %>
       </div>
     <% end %>
   </div>
