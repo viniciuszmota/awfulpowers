@@ -1,5 +1,26 @@
-<%= cl_image_tag @power.photo.key, height: 300, width: 400, crop: :fill %>
-<h1><%= @power.name%></h1>
-<p><%= @power.description %></p>
-<p>$<%= @power.price %></p>
-<%= button_to "Comprar", orders_path(order: { power_id: @power.id }), data: { turbo_method: :post }, class: "btn btn-primary" %>
+<div class="container mt-5">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center">
+      <% if @power.photo.present? %>
+        <%= cl_image_tag @power.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid rounded" %>
+      <% else %>
+        <%= image_tag "no-image.jpg", alt: "Sem imagem", width: 350, height: 500 %>
+      <% end %>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card power-card shadow-sm p-4 d-flex flex-column justify-content-between" style="width: 600px; height: 700px;">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h2 class="card-title title-nowrap mb-3"><%= @power.name %></h2>
+          <h3 class="mb-2">Descrição do poder</h3>
+          <p class="card-text mb-4"><%= @power.description %></p>
+          <p class="price mb-4">$<%= @power.price %></p>
+          <div class="d-flex justify-content-center">
+            <%= button_to "Comprar", orders_path(order: { power_id: @power.id }),
+                data: { turbo_method: :post }, class: "custom-button" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
