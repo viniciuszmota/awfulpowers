@@ -2,7 +2,7 @@
   <div class="row align-items-center">
     <div class="col-md-6 text-center">
       <% if @power.photo.present? %>
-        <%= cl_image_tag @power.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid rounded" %>
+        <%= cl_image_tag @power.photo.key, height: 500, width: 350, crop: :fill, class: "img-fluid rounded" %>
       <% else %>
         <%= image_tag "no-image.jpg", alt: "Sem imagem", width: 350, height: 500 %>
       <% end %>

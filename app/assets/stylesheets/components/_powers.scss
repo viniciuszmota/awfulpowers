@@ -33,10 +33,9 @@
   grid-template-columns: repeat(4, 1fr);
 }
 .card img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
   margin-bottom: 10px;
 }
 
