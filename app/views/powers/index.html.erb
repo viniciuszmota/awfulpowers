@@ -1,5 +1,19 @@
-<h1> Lista de poderes disponíveis </h1>
+<h1>Lista de poderes disponíveis</h1>
 <ul>
-  <% @powers.each do |power| %>
-    <li><%= power.name %></li>
-  <% end %>
+  <div class="card-container">
+    <% @powers.each do |power| %>
+      <%= link_to power_path(power), class: "card-link" do %>
+        <div class="card">
+          <div class="card-image">
+            <% if power.photo.present? %>
+              <%= cl_image_tag power.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid rounded" %>
+            <% else %>
+              <%= image_tag "no-image.jpg", alt: "Sem imagem" %>
+            <% end %>
+          </div>
+          <li><%= power.name %></li>
+        </div>
+      <% end %>
+    <% end %> 
+  </div>
+</ul>
