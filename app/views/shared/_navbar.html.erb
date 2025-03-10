@@ -3,12 +3,20 @@
     <a class="navbar-brand" href="#">
       <img src="/assets/logo_navbar.png" alt="Logo" class="logo-navbar">
     </a>
-    <div class="nav-list">
-      <a href="#" class="nav-link custom-nav-link">HOME</a>
-      <a href="#" class="nav-link custom-nav-link">SOBRE</a>
-      <a href="#" class="nav-link custom-nav-link">CONTATO</a>
-      <button class="btn custom-button">Login</button>
-      <button class="btn custom-button">Cadastrar</button>
-    </div>
+
+    <% if user_signed_in? %>
+      <div class="nav-list">
+        <%= link_to 'COMPRAR', '#', class: 'nav-link custom-nav-link' %>
+        <button class="btn custom-button"><%= button_to "Sair", destroy_user_session_path, method: :delete %></button>
+      </div>
+    <% else %>
+      <div class="nav-list">
+        <%= link_to 'HOME', '#', class: 'nav-link custom-nav-link' %>
+        <%= link_to 'SOBRE', '#', class: 'nav-link custom-nav-link' %>
+        <%= link_to 'CONTATO', '#', class: 'nav-link custom-nav-link' %>
+        <button class="btn custom-button"><%= link_to "Login", new_user_session_path %></button>
+        <button class="btn custom-button">Cadastrar</button>
+      </div>
+    <% end %>
   </div>
 </nav>
