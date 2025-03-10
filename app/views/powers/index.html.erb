@@ -8,7 +8,7 @@
             <% if power.photo.present? %>
               <%= cl_image_tag power.photo.key, height: 300, width: 400, crop: :fill, class: "img-fluid rounded" %>
             <% else %>
-              <p>Sem imagem disponível</p>
+              <%= image_tag "no-image.jpg", alt: "Sem imagem" %>
             <% end %>
           </div>
           <li><%= power.name %></li>
