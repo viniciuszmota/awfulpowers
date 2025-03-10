@@ -1,6 +1,8 @@
 <h1>Lista das suas orders</h1>
 <ul>
   <% @orders.each do |order|%>
-    <li><%= order.power.name %></li>  
+    <li><%= order.power.name %></li>
   <%end%>
 </ul>
+
+<%= button_to "Logout", destroy_user_session_path, method: :delete %>
