@@ -2,68 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
+  margin-top: 100px;
 }
 
 .header-text {
-  width: 897px;
+  width: 1153px;
+  height: 199px;
+  flex-shrink: 0;
   color: #000;
   text-align: center;
-  font-family: Montserrat, sans-serif;
-  font-size: 56px;
-  font-weight: 400;
+  font-family: Montserrat;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
   line-height: 66px;
-  margin-top: 20px;
+  margin-top: 150px;
 }
 
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  position: relative;
-  margin-top: 40px;
-}
-
-.cards-container {
-  width: 900px;
-  overflow: hidden;
-}
-
-.cards-wrapper {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.card {
-  width: 350px;
-  height: 500px;
-  margin: 0 10px;
+.cards-home {
+  width: 1116px;
+  height: 930px;
   flex-shrink: 0;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-}
-
-button {
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  position: absolute;
-}
-
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
+  aspect-ratio: 6/5;
+  margin-top: 100px;
 }
