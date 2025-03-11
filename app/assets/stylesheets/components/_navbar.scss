@@ -8,6 +8,10 @@
   padding-left: 80px;
 }
 
+.navbar{
+  padding-right: 16px;
+}
+
 .custom-nav-link {
   color: #080808;
   text-align: center;
@@ -60,6 +64,7 @@
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
   text-decoration: none;
+  text-decoration: none;
 }
 
 
@@ -91,13 +96,11 @@
   text-align: center;
   color: black;
   z-index: 999999;
-  border: 2px dashed black;
-  margin-top: 20px;
 
   opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(-10px); /* Começa ligeiramente acima da posição final */
+  pointer-events: none; /* Impede interações antes de aparecer */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Transição suave */
 }
 
 
@@ -143,7 +146,7 @@
 
 
 #user-menu.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Move para a posição final */
+  pointer-events: auto; /* Permite interações com o menu */
 }
