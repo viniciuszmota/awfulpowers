@@ -21,10 +21,6 @@ class PowersController < ApplicationController
     @powers = Power.all
   end
 
-  def edit
-
-  end
-
   def update
     if @power.update(power_params)
       redirect_to power_path(@power), notice: "Poder atualizado com sucesso!"
@@ -50,3 +46,4 @@ class PowersController < ApplicationController
     params.require(:power).permit(:name, :description, :price, :category, :photo)
   end
 end
+
