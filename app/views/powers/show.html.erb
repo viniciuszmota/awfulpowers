@@ -19,6 +19,14 @@
             <%= button_to "Comprar", orders_path(order: { power_id: @power.id }),
                 data: { turbo_method: :post }, class: "custom-button" %>
           </div>
+
+          <div class="d-flex justify-content-center">
+            <%= link_to "Editar", edit_power_path(@power), method: :get, class: "custom-button" %>
+          </div>
+
+          <div class="d-flex justify-content-center">
+            <%= button_to "Deletar", power_path(@power), method: :delete, class: "custom-button" %>
+          </div>
         </div>
       </div>
     </div>
