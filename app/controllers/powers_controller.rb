@@ -19,6 +19,9 @@ class PowersController < ApplicationController
 
   def index
     @powers = Power.all
+    if params[:query].present?
+      @powers = @powers.where("name ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def update
@@ -46,4 +49,3 @@ class PowersController < ApplicationController
     params.require(:power).permit(:name, :description, :price, :category, :photo)
   end
 end
-
