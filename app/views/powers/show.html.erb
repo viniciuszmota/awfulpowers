@@ -1,31 +1,26 @@
-<div class="container mt-5">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center">
+<div class="power-container">
+  <div class="power-row">
+    <div class="power-image">
       <% if @power.photo.present? %>
-        <%= cl_image_tag @power.photo.key, height: 500, width: 350, crop: :fill, class: "img-fluid rounded" %>
+        <%= cl_image_tag @power.photo.key, height: 500, width: 350, crop: :fill, class: "power-img" %>
       <% else %>
-        <%= image_tag "no-image.jpg", alt: "Sem imagem", width: 350, height: 500 %>
+        <%= image_tag "no-image.jpg", alt: "Sem imagem", width: 350, height: 500, class: "power-img" %>
       <% end %>
     </div>
 
-    <div class="col-md-6">
-      <div class="card power-card shadow-sm p-4 d-flex flex-column justify-content-between" style="width: 600px; height: 700px;">
-        <div class="card-body d-flex flex-column justify-content-between">
-          <h2 class="card-title title-nowrap mb-3"><%= @power.name %></h2>
-          <h3 class="mb-2">Descrição do poder</h3>
-          <p class="card-text mb-4"><%= @power.description %></p>
-          <p class="price mb-4">$<%= @power.price %></p>
-          <div class="d-flex justify-content-center">
+    <div class="power-details">
+      <div class="power-card">
+        <div class="power-card-body">
+          <h2 class="power-title"><%= @power.name %></h2>
+          <h3 class="power-subtitle">Descrição do poder</h3>
+          <p class="power-text"><%= @power.description %></p>
+          <p class="power-price">$<%= @power.price %></p>
+
+          <div class="power-button-group">
             <%= button_to "Comprar", orders_path(order: { power_id: @power.id }),
-                data: { turbo_method: :post }, class: "custom-button" %>
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <%= link_to "Editar", edit_power_path(@power), method: :get, class: "custom-button" %>
-          </div>
-
-          <div class="d-flex justify-content-center">
-            <%= button_to "Deletar", power_path(@power), method: :delete, class: "custom-button" %>
+                data: { turbo_method: :post }, class: "power-button" %>
+            <%= button_to "Editar", edit_power_path(@power), method: :get, class: "power-button" %>
+            <%= button_to "Deletar", power_path(@power), method: :delete, class: "power-button" %>
           </div>
         </div>
       </div>
