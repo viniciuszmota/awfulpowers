@@ -5,16 +5,27 @@
   background: #FFF;
   margin-right: 30px;
   text-decoration: none;
+  padding-left: 80px;
 }
 
 .custom-nav-link {
   color: #080808;
   text-align: center;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px 0 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   text-decoration: none;
+}
+
+.custom-nav-link:hover {
+  background-color: #2cffff1f;
 }
 
 .logo-navbar {
@@ -37,6 +48,7 @@
   text-decoration: none;
 }
 
+
 .custom-button {
   display: flex;
   padding: 18px 24px;
@@ -48,4 +60,87 @@
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
   text-decoration: none; 
+}
+
+
+.user-avatar{
+  width: 70px;
+  height: 70px;
+  position: relative;
+  border-radius: 50%;
+  object-fit: cover;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.user-avatar:hover {
+  box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
+}
+
+#user-menu {
+  position: absolute;
+  top: 100px;
+  right: 1.8%;
+  width: 200px;
+  border: solid 0.6px;
+  padding: 10px 10px 0px 10px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 4px 4px 10px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
+  text-align: center;
+  color: black;
+  z-index: 999999;
+  
+  opacity: 0; 
+  transform: translateY(-10px); /* Começa ligeiramente acima da posição final */
+  pointer-events: none; /* Impede interações antes de aparecer */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Transição suave */
+}
+
+/* Classe para exibir o menu */
+#user-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all; /* Habilita interações */
+}
+
+#user-menu .block {
+  all: unset;
+  text-decoration: none;
+  display: block;
+  width: 120px;
+  color: black;
+  border-radius: 3px;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-bottom: 0.2px solid #b1b1b1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover corrigido */
+#user-menu .block:hover {
+  background-color: #2cffff1f;
+}
+
+
+.user-avatar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0; /* Remove padding extra */
+  border: none; /* Remove borda padrão do botão */
+  background: transparent; /* Mantém o fundo transparente */
+  cursor: pointer;
+}
+
+
+
+#user-menu.show {
+  opacity: 1; /* Torna visível */
+  transform: translateY(0); /* Move para a posição final */
+  pointer-events: auto; /* Permite interações com o menu */
 }
