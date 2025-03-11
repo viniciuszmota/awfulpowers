@@ -1,5 +1,24 @@
-<h2>Detalhes do Pedido</h2>
+<div class="container mt-1">
+  <div class="card power-card shadow-sm p-4 d-flex flex-column justify-content-between" style="width: 600px; height: 700px;">
+  <h2>Detalhes do Pedido</h2>
 
-<p><strong>ID do Pedido:</strong> <%= @order.id %></p>
-<p><strong>Poder:</strong> <%= @order.power.name %></p>
-<p><strong>Email do Usuário:</strong> <%= @order.user.email %></p>
+  <p><strong>ID do Pedido:</strong> <%= @order.id %></p>
+
+  <p><strong>Poder:</strong> <%= @order.power.name %></p>
+
+  <p><strong>Preço:</strong> <%= @order.power.price %></p>
+
+  <div class="col-md-6 text-center">
+      <% if @power.photo.present? %>
+        <%= cl_image_tag @power.photo.key, height: 500, width: 350, crop: :fill, class: "img-fluid rounded" %>
+      <% else %>
+        <%= image_tag "no-image.jpg", alt: "Sem imagem", width: 350, height: 500 %>
+      <% end %>
+    </div>
+
+  <p><strong>Email do Usuário:</strong> <%= @order.user.email %></p>
+
+  <%= link_to "Voltar", orders_path, class: "custom-button" %>
+</div>
+
+</div>
