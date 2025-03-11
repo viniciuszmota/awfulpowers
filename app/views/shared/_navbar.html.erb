@@ -6,22 +6,24 @@
 
     <% if user_signed_in? %>
       <div class="nav-list">
-        <%= link_to 'Home', root_path, class: 'nav-link custom-nav-link' %>
+        <%= link_to 'HOME', root_path, class: 'nav-link custom-nav-link' %>
+        <%= link_to 'SOBRE', root_path, class: 'nav-link custom-nav-link' %>
+        <%= link_to 'CONTATO', root_path, class: 'nav-link custom-nav-link' %>
         <div class="relative" data-action="click@document->user-menu#close">
           <button id="user-menu-button" class="user-avatar-button" data-action="click->user-menu#toggle">
             <% if current_user.photo.present? %>
               <%= image_tag current_user.photo, class: "user-avatar" %>
             <% else %>
-              <%= image_tag "no-image.jpg", class: "user-avatar" %>
+              <%= image_tag "no-avatar.jpg", class: "user-avatar" %>
             <% end %>
           </button>
-          <div id="user-menu" 
-          data-user-menu-target="menu" 
+          <div id="user-menu"
+          data-user-menu-target="menu"
           class="hidden absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-lg z-50">
             <%= link_to "Meus pedidos", orders_path, class: "block px-4 py-2 text-gray-700 hover:bg-gray-200" %>
             <%= link_to 'Comprar', powers_path, class: 'block px-4 py-2 text-gray-700 hover:bg-gray-200' %>
             <%= link_to "Vender", new_power_path, class: "block px-4 py-2 text-gray-700 hover:bg-gray-200" %>
-            <%= button_to "Sair", destroy_user_session_path, method: :delete, 
+            <%= button_to "Sair", destroy_user_session_path, method: :delete,
             class: "block px-4 py-2 text-gray-700 hover:bg-gray-200"%>
 
           </div>

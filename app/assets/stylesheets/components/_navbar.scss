@@ -59,7 +59,7 @@
   border: 1px solid #040404;
   background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 
@@ -71,6 +71,7 @@
   object-fit: cover;
   text-decoration: none;
   margin-left: 40px;
+  border: solid 0.6px;
 }
 
 .user-avatar:hover {
@@ -90,18 +91,20 @@
   text-align: center;
   color: black;
   z-index: 999999;
-  
-  opacity: 0; 
-  transform: translateY(-10px); /* Começa ligeiramente acima da posição final */
-  pointer-events: none; /* Impede interações antes de aparecer */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Transição suave */
+  border: 2px dashed black;
+  margin-top: 20px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-/* Classe para exibir o menu */
+
 #user-menu.show {
   opacity: 1;
   transform: translateY(0);
-  pointer-events: all; /* Habilita interações */
+  pointer-events: all;
 }
 
 #user-menu .block {
@@ -118,7 +121,6 @@
   cursor: pointer;
 }
 
-/* Hover corrigido */
 #user-menu .block:hover {
   background-color: #2cffff1f;
 }
@@ -131,16 +133,17 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  padding: 0; /* Remove padding extra */
-  border: none; /* Remove borda padrão do botão */
-  background: transparent; /* Mantém o fundo transparente */
+  padding: 0;
+  border: none;
+  background: transparent;
   cursor: pointer;
+  margin-right: 40px;
 }
 
 
 
 #user-menu.show {
-  opacity: 1; /* Torna visível */
-  transform: translateY(0); /* Move para a posição final */
-  pointer-events: auto; /* Permite interações com o menu */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
