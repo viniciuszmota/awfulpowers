@@ -1,5 +1,4 @@
 <div class="login-container">
-  <%= image_tag "div-login-3.png", class: "login-background" %>
   <h2>Entrar</h2>
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-inputs">
@@ -14,7 +13,9 @@
                   required: false,
                   label: false,
                   input_html: { class: "login-input", autocomplete: "current-password" } %>
+
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+
     </div>
     <div class="form-actions">
       <div class="form-actions">
@@ -23,7 +24,8 @@
   <% end %>
   <div class="form-actions">
     <%= button_tag "Entrar com Google", class: "google-button" %>
+
   </div>
-  <p class="forgot-password"><%= link_to "Esqueceu sua senha?", new_password_path(resource_name) %></p>
-  <%= render "devise/shared/links" %>
 </div>
+
+<%= render "devise/shared/links" %>

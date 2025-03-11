@@ -1,9 +1,9 @@
 .container {
   display: flex;
-  width: 100%;	
+  width: 100%;
   flex-direction: column;
   gap: 26px;
-  
+
 }
 
 .card {
@@ -18,14 +18,14 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  transition: box-shadow 0.3s ease-in-out; /* Suaviza a transição */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .card:hover{
-  box-shadow: 0px 2px 8px #2CFFFF; /* Sombra azul neon */
+  box-shadow: 0px 2px 8px #2CFFFF; 
 }
 
-.card-container { 
+.card-container {
   display: grid;
   margin: auto;
   width: 80%;
