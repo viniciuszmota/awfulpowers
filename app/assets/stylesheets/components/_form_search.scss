@@ -2,18 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%; /* Flexível para ajustar ao tamanho da tela */
-  max-width: 551px; /* Tamanho máximo do formulário */
+  width: 100%;
+  max-width: 1500px;
   height: 54px;
   padding: 18px 24px;
   border-radius: 30px;
-  border: 1px solid #000;
+  border: 2px dashed black;
   background: #FFF;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .form-search input {
-  flex-grow: 1; /* Faz o input crescer e ocupar o espaço disponível */
-  margin-right: 15px; /* Espaço de 15px entre o campo de texto e o botão */
+  flex-grow: 1;
+  margin-right: 15px;
   border-radius: 30px;
+  border: 2px dashed black;
 }
