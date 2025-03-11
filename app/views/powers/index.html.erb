@@ -5,7 +5,7 @@
     <%= form_with url: powers_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
             params[:query],
-            class: "form-control me-2",
+            class: "form-search",
             placeholder: "Pesquisar um poder"
         %>
       <%= submit_tag "Pesquisar", name: "", class: "custom-button" %>
@@ -14,7 +14,7 @@
 </div>
 
 <ul>
-  <div class="card-container">
+  <div class="card-container-index">
     <% @powers.each do |power| %>
       <%= link_to power_path(power), class: "card-link" do %>
         <div class="card">
