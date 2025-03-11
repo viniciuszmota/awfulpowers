@@ -1,0 +1,25 @@
+<div class="form-container">
+  <h2>Edite seu Poder</h2>
+
+  <%= simple_form_for(@power) do |f| %>
+
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :price %>
+      <%= f.input :description %>
+      <%= f.input :category %>
+      <%= f.input :photo, as: :file %>
+    </div>
+
+    <div class="form-btn">
+      <%= f.button :submit, class: "custom-button"%>
+    </div>
+  <% end %>
+
+  <div>
+    <%= link_to 'Back', powers_path, class: "custom-button" %>
+  </div>
+</div>
