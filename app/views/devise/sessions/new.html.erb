@@ -18,14 +18,9 @@
 
     </div>
     <div class="form-actions">
-      <div class="form-actions">
       <%= f.button :submit, "Entrar", class: "login-button" %>
-    </div>
   <% end %>
-  <div class="form-actions">
-    <%= button_tag "Entrar com Google", class: "google-button" %>
-
-  </div>
+    <%= button_tag "Entrar com Google", id: "google-button", class: "google-button" %>
 </div>
 
 <%= render "devise/shared/links" %>

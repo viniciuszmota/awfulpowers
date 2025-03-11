@@ -1,0 +1,25 @@
+@keyframes rotateBorder {
+  0% {
+    border-image-source: linear-gradient(0deg, black, transparent);
+  }
+  25% {
+    border-image-source: linear-gradient(90deg, black, transparent);
+  }
+  50% {
+    border-image-source: linear-gradient(180deg, black, transparent);
+  }
+  75% {
+    border-image-source: linear-gradient(270deg, black, transparent);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, black, transparent);
+  }
+}
+
+// .login-container:has(input:focus, textarea:focus) {
+//   animation: rotateBorder 4s linear infinite;
+//   border-radius: 4px;
+//   border-style: solid; /* Para garantir que a animação seja visível */
+//   border-width: 2px;
+//   border-image-slice: 1;
+// }
