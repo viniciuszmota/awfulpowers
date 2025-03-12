@@ -6,6 +6,7 @@
   margin-right: 30px;
   text-decoration: none;
   padding-left: 80px;
+  position: fixed;
 }
 
 .navbar{
@@ -109,7 +110,7 @@
   opacity: 1;
   transform: translateY(0);
   pointer-events: all;
-   
+
 }
 
 #user-menu .block {
