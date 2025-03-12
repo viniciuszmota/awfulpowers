@@ -9,16 +9,72 @@ html, body {
   width: 100%;
 }
 
-.container-home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.container-powers {
+  position: relative;
   width: 100%;
-  height: 100vh;
-  margin-top: 100px;
+  height: 100%;
+  overflow: hidden; 
 }
 
+.header-text {
+  background-color: rgba(0, 0, 0, 0.886);
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 36px;
+  z-index: 10;
+  color: white;
+}
+
+.header-text h1 {
+  font-size: 48px;
+  color: white;
+}
+
+.column {
+.container-home {
+  display: flex;
+  width: 700px;
+  height: 100%;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden; 
+}
+
+@keyframes move-up {
+  0% { transform: translateY(0%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes move-down {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0%); }
+}
+
+.column .img {
+  width: 100%;
+  height: 580px;
+  object-fit: contain;
+  position: relative;
+  opacity: 0.8;
+}
+.cards-home{
+  overflow: hidden; 
+  height: 100vh;
+}
+.home-container{
+  display:flex;
+  overflow: hidden; 
+  height: 100%;
+}
+
+.column:nth-child(odd) .img {
+  animation: move-up 20s linear infinite alternate;
 .header-text {
   width: 1153px;
   height: 199px;
@@ -34,10 +90,7 @@ html, body {
   z-index: 1;
 }
 
-.cards-home {
-  width: 1116px;
-  height: 930px;
-  flex-shrink: 0;
-  aspect-ratio: 6/5;
-  margin-top: 100px;
+.column:nth-child(even) .img {
+  animation: move-down 20s linear infinite alternate;
 }
+
