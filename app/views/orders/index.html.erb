@@ -6,7 +6,7 @@
       <% @orders.each do |order| %>
         <% total_price += order.power.price %>
           <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span><%= link_to order.power.name, order_path(order) %></span>
+            <span><%= order.power.name %></span>
             <strong><%= order.power.price %></strong>
             <%= button_to "Deletar", order_path(order), method: :delete, class: "custom-button" %>
           </li>
