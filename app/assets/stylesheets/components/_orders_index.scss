@@ -1,11 +1,11 @@
 .container-orders-index {
   display: flex;
-  justify-content: center;  // Centraliza horizontalmente
-  align-items: center;      // Centraliza verticalmente
-  // min-height: 100vh;        // Garante que o container ocupe 100% da altura da tela
-  flex-direction: column;   // Coloca os elementos em coluna (título acima da lista)
+  justify-content: center;  
+  align-items: center;
+  // min-height: 100vh;
+  flex-direction: column;
   text-align: center;
-  padding-top: 50px;       // Centraliza o texto
+  padding-top: 50px;
 }
 
 
