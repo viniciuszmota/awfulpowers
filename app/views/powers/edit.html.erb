@@ -1,24 +1,27 @@
-<div class="form-container">
+<div class="form-container-edit-powers">
   <h2>Edite seu Poder</h2>
     <%= simple_form_for(@power) do |f| %>
 
       <%= f.error_notification %>
       <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <div class="form-inputs">
-        <%= f.input :name %>
-        <%= f.input :price %>
-        <%= f.input :description %>
-        <%= f.input :category %>
-        <%= f.input :photo, as: :file %>
-      </div>
+      <div class="form-inputs-edit-powers">
+        <label class="login-label-edit-powers">Nome:</label>
+        <%= f.input :name, label: false, required: true, input_html: { autocomplete: "name" } %>
+        <label class="login-label-edi-powers">Preço:</label>
+        <%= f.input :price, label: false, required: true, input_html: { autocomplete: "price" } %>
+        <label class="login-label-edit-powers">Descrição:</label>
+        <%= f.input :description, label: false, required: true, input_html: { autocomplete: "description" } %>
+        <label class="login-label-edit-powers">Categoria:</label>
+        <%= f.input :category, label: false, required: true, input_html: { autocomplete: "category" } %>
+        <label class="login-label-edit-powers">Seu Card:</label>
+        <%= f.input :photo, as: :file, label: false, input_html: { autocomplete: "photo" } %>
 
-      <div class="form-btn">
-        <%= f.button :submit, class: "custom-button"%>
+      </div>
+      <div class="power-button-edit-group">
+      <div class="form-btn-edit-powers">
+        <%= f.button :submit, class: "custom-button-edit-powers"%>
+        <%= button_to 'Voltar', powers_path , class: "custom-button-edit-powers" %>
       </div>
     <% end %>
-
-    <div>
-      <%= link_to 'Back', powers_path, class: "custom-button" %>
-    </div>
 </div>

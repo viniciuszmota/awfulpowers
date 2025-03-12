@@ -1,6 +1,5 @@
-<h1 class="text-center mb-4">Lista das suas ordens</h1>
-
-<div class="d-flex justify-content-center align-items-center min-vh-100">
+<div class="container-orders-index">
+  <h1>Suas compras</h1>
   <div class="order-list">
     <ul class="list-group">
       <% total_price = 0 %>
@@ -14,12 +13,7 @@
       <% end %>
     </ul>
 
-      <div class="text-center mt-4">
-        <h3 class="fw-bold">Preço Total: $<%= total_price %></h3>
-      </div>
+        <h3 class="text-price-orders-index">Preço Total: $<%= total_price %></h3>
 
-    <div class="text-center mt-4">
-      <%= image_tag "uncleben.gif", alt: "Responsabilidade", class: "img-fluid" %>
-    </div>
   </div>
 </div>

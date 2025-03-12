@@ -1,5 +1,5 @@
 .login-container-sign-up{
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -10,7 +10,7 @@
   padding: 20px;
   border: 2px dashed black;
   border-radius: 20px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .login-label-sign-up{
@@ -40,12 +40,13 @@
   color: white;
   font-weight: bold;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-bottom: 20px;;
   box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
 }
 
 a {
   text-decoration: none;
   color: black;
-  margin-top: 20px;
+  margin-top: 30px;
 }
