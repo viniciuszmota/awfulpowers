@@ -22,6 +22,17 @@ html, body {
   padding: 20px;
 }
 
+.header-text-home span {
+  display: inline-block;
+  transition: color 10s, text-shadow 20s ease-out;
+}
+
+.header-text-home span:hover {
+  color: #2CFFFF;
+  text-shadow: 0px 0px 10px #2CFFFF, 0px 0px 20px rgba(44, 255, 255, 0.7);
+  transition: color 0s, text-shadow 0.2s ease-out;
+}
+
 
 .container-home {
   display: flex;
@@ -32,6 +43,7 @@ html, body {
   overflow: hidden; 
 }
 .header-text-home {
+  cursor: default;
   background-color: rgba(0, 0, 0, 0.886);
   padding: 30px;
   box-sizing: border-box;
@@ -46,7 +58,7 @@ html, body {
   box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
   left: 50%;
   text-align: center;
-  font-size: 36px;
+  font-size: 32px;
   z-index: 10;
   color: white !important;
 }
