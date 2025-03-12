@@ -10,40 +10,45 @@ html, body {
 }
 
 .container-powers {
-  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden; 
 }
 
-.header-text {
-  background-color: rgba(0, 0, 0, 0.886);
-  padding: 30px;
-  position: absolute;
-  top: 50%;
-  border-radius: 20px;
-  box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-size: 36px;
-  z-index: 10;
-  color: white;
-}
 
-.header-text h1 {
+.header-text-home h1 {
+  color: white;
   font-size: 48px;
-  color: white;
+  padding: 20px;
 }
 
-.column {
+
 .container-home {
   display: flex;
-  width: 700px;
+  width: 100%;
   height: 100%;
   flex-direction: column;
   position: relative;
   overflow: hidden; 
+}
+.header-text-home {
+  background-color: rgba(0, 0, 0, 0.886);
+  padding: 30px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(248, 95, 144, 0.25), 0px 4px 4px 0px #2CFFFF;
+  left: 50%;
+  text-align: center;
+  font-size: 36px;
+  z-index: 10;
+  color: white !important;
 }
 
 @keyframes move-up {
@@ -75,6 +80,7 @@ html, body {
 
 .column:nth-child(odd) .img {
   animation: move-up 20s linear infinite alternate;
+}
 .header-text {
   width: 1153px;
   height: 199px;
@@ -88,9 +94,9 @@ html, body {
   line-height: 66px;
   margin-top: 150px;
   z-index: 1;
-}
+  }
+
 
 .column:nth-child(even) .img {
   animation: move-down 20s linear infinite alternate;
 }
-
