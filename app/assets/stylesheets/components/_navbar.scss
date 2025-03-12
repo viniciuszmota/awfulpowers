@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+}
+
 .custom-navbar {
   width: 100vw;
   height: 130px;
@@ -6,7 +10,7 @@
   margin-right: 30px;
   text-decoration: none;
   padding-left: 80px;
-  position: fixed;
+
 }
 
 .navbar{

@@ -9,7 +9,7 @@ html, body {
   width: 100%;
 }
 
-.container {
+.container-home {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,6 +31,7 @@ html, body {
   font-weight: 700;
   line-height: 66px;
   margin-top: 150px;
+  z-index: 1;
 }
 
 .cards-home {
