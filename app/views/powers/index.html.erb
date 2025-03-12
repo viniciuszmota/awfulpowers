@@ -25,7 +25,8 @@
               <%= image_tag "no-image.jpg", alt: "Sem imagem" %>
             <% end %>
           </div>
-          <li><%= power.name %></li>
+          <li><strong><%= power.name %></strong></li>
+          <li class="text-price-orders-index">$<%= power.price %></li>
         </div>
       <% end %>
     <% end %>
