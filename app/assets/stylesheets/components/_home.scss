@@ -37,6 +37,7 @@ html, body {
 }
 
 .column {
+.container-home {
   display: flex;
   width: 700px;
   height: 100%;
@@ -74,6 +75,19 @@ html, body {
 
 .column:nth-child(odd) .img {
   animation: move-up 20s linear infinite alternate;
+.header-text {
+  width: 1153px;
+  height: 199px;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 66px;
+  margin-top: 150px;
+  z-index: 1;
 }
 
 .column:nth-child(even) .img {

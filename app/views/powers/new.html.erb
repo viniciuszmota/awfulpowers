@@ -1,30 +1,32 @@
-<div class="form-container-new-powers">
-  <h2>Novo Poder</h2>
+<div class="fix-container">
+  <div class="form-container-new-powers">
+    <h2>Novo Poder</h2>
 
-    <%= simple_form_for(@power) do |f| %>
-      <%= f.error_notification %>
-      <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <%= simple_form_for(@power) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-      <div class="form-inputs-new-powers">
-        <label class="login-label-new-powers">Nome:</label>
-        <%= f.input :name, label: false, required: true, input_html: { autocomplete: "name" } %>
-        <label class="login-label-new-powers">Preço:</label>
-        <%= f.input :price, label: false, required: true, input_html: { autocomplete: "price" } %>
-        <label class="login-label-new-powers">Descrição:</label>
-        <%= f.input :description, label: false, required: true, input_html: { autocomplete: "description" } %>
-        <label class="login-label-new-powers">Categoria:</label>
-        <%= f.input :category, label: false, required: true, input_html: { autocomplete: "category" } %>
-        <label class="login-label-new-powers">Seu Card:</label>
-        <%= f.input :photo, as: :file, label: false, input_html: { autocomplete: "photo" } %>
+        <div class="form-inputs-new-powers">
+          <label class="login-label-new-powers">Nome:</label>
+          <%= f.input :name, label: false, required: true, input_html: { autocomplete: "name" } %>
+          <label class="login-label-new-powers">Preço:</label>
+          <%= f.input :price, label: false, required: true, input_html: { autocomplete: "price" } %>
+          <label class="login-label-new-powers">Descrição:</label>
+          <%= f.input :description, label: false, required: true, input_html: { autocomplete: "description" } %>
+          <label class="login-label-new-powers">Categoria:</label>
+          <%= f.input :category, label: false, required: true, input_html: { autocomplete: "category" } %>
+          <label class="login-label-new-powers">Seu Card:</label>
+          <%= f.input :photo, as: :file, label: false, input_html: { autocomplete: "photo" } %>
 
-      </div>
+        </div>
+
+        <div>
+          <%= f.button :submit, "Vender", class: "new-powers-button" %>
+        </div>
+      <% end %>
 
       <div>
-        <%= f.button :submit, "Vender", class: "new-powers-button" %>
+        <%= link_to 'Voltar', powers_path %>
       </div>
-    <% end %>
-
-    <div>
-      <%= link_to 'Voltar', powers_path %>
-    </div>
+  </div>
 </div>
